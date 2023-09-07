@@ -12,7 +12,7 @@ const Header = () => {
             to=""
             className="toggleColor text-white no-underline hover:no-underline font-bold text-2xl lg:text-4xl"
           >
-            <img src={Logo} alt="logo" className="w-30 h-20 object-cover" />
+            <img src={Logo} alt="logo" className="w-20 h-15 object-cover" />
           </Link>
         </div>
         <div className=" flex nav-menu-wrapper  items-center justify-between space-x-10">
