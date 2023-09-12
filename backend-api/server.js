@@ -11,6 +11,9 @@ var cors = require("cors");
 const authRoutes = require("./routes/authRoutes")
 const productRoutes = require("./routes/productRoutes")
 const userRoutes = require("./routes/userRoutes")
+const cartRoutes = require("./routes/cartRoutes")
+const orderRoutes = require("./routes/orderRoutes")
+const paymentRoute = require('./routes/stripeRoute')
 
 //database connection
 mongoose
@@ -35,7 +38,10 @@ app.use(cookieParser());
 app.use(cors());
 
 app.use("/api",productRoutes)
+app.use("/api",orderRoutes)
+app.use("/api",cartRoutes)
 app.use("/api",userRoutes)
+app.use("/api",paymentRoute)
 app.use("/api/auth",authRoutes)
 
 const port = process.env.PORT || 8787

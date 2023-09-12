@@ -14,10 +14,11 @@ module.exports.register = async (req, res, next) => {
       process.env.PW_SEC
     ).toString(),
   });
-  if (newUser.email) {
+  const email = newUser.email
+  const emailExit = await User.findOne({email});
+  if (emailExit) {
     return next(new ErrorResponse("E-mail already registred", 400));
 }
-
   try {
     const saveUser = await newUser.save();
     res.status(201).json({

@@ -22,23 +22,25 @@ module.exports.getProducts = async (req, res, next) => {
   
       res.status(200).json(products);
     } catch (err) {
-    next(new ErrorResponse("server error", 500));
+    next(err);
   }
 };
 
 //create
 module.exports.createProduct = async (req, res, next) => {
+ 
   const newProduct = new Product(req.body);
 
   try {
-    const saveProduct = await newProduct.save();
-    res.status(201).json({
-      success: true,
-      saveProduct,
+    const savedProduct = await newProduct.save();
+    res.status(200).json({
+      success:true,
+      savedProduct
     });
   } catch (err) {
-    next(new ErrorResponse("server error", 500));
+    next(err)
   }
+
 };
 
 //update
