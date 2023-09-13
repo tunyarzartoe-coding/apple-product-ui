@@ -1,43 +1,3 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-@layer base {
-  @font-face {
-    font-family: 'ClashDisplay-Regular';
-    src: url('../src/components/assets/fonts/ClashDisplay-Regular.woff2')format('woff2');
-    font-weight: 400;
-    font-display: swap;
-    font-style: normal;
-  }
-
-  @font-face {
-    font-family: 'ClashDisplay-Medium';
-    src: url('../src//components//assets/fonts/ClashDisplay-Medium.woff2')format('woff2');
-    font-weight: 500;
-    font-display: swap;
-    font-style: normal;
-  }
-
-  @font-face {
-    font-family: 'ClashDisplay-Bold';
-    src: url('../src//components//assets/fonts/ClashDisplay-Bold.woff2')format('woff2');
-    font-weight: 700;
-    font-display: swap;
-    font-style: normal;
-  }
-}
-
-.line-clamp-4 {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 4;
-  max-height: 109px;
-  line-height: 1.26;
-}
-
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap");
 * {
   font-family: 'Poppins', sans-serif;
@@ -67,7 +27,7 @@ html::-webkit-scrollbar-track {
 }
 
 html::-webkit-scrollbar-thumb {
-  background: #003366;
+  background: #0652DD;
   border-radius: 5rem;
 }
 
@@ -87,7 +47,7 @@ section {
 }
 
 .heading span {
-  color: #003366;
+  color: #0652DD;
 }
 
 .btn {
@@ -128,7 +88,7 @@ section {
   left: 0;
   right: 0;
   z-index: 1000;
-  background: #003366;
+  background: #0652DD;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -142,9 +102,9 @@ section {
 }
 
 .header .logo {
-  /* font-size: 3.5rem; */
+  font-size: 2.5rem;
   color: #fff;
-  /* font-weight: bolder; */
+  font-weight: bolder;
 }
 
 .header .logo i {
@@ -171,8 +131,6 @@ section {
   font-size: 1.7rem;
   text-transform: none;
   color: #666;
-  border: none; /* Remove the border */
-  outline: none; /* Remove the outline when focused */
 }
 
 .header .search-form label {
@@ -202,7 +160,7 @@ section {
   display: none;
 }
 
-/* .side-bar {
+.side-bar {
   position: fixed;
   top: 0;
   left: -110%;
@@ -210,25 +168,7 @@ section {
   width: 30rem;
   background: #fff;
   z-index: 10000;
-} */
-
-
-
-/* Add your other CSS styles here */
-
-.side-bar {
-  position: fixed;
-  top: 0;
-  left: -110%;
-  width: 24rem;
-  height: 100%;
-  background: #fff;
-  transition: left 0.6s ease; /* Add a transition for 'left' property */
-  z-index: 10000;
 }
-
-
-
 
 .side-bar.active {
   left: 0;
@@ -254,7 +194,7 @@ section {
 .side-bar .user {
   padding: 2rem;
   background: #eee;
-  justify-content: center;
+  text-align: center;
 }
 
 .side-bar .user img {
@@ -286,23 +226,20 @@ section {
   padding-top: 1rem;
 }
 
-.side-bar .navbar a{
+.side-bar .navbar a {
   display: block;
   padding: 1rem 2rem;
   font-size: 1.7rem;
-  color: #2d2d2d;
-  align-items: center;
-
+  color: #666;
 }
 
 .side-bar .navbar a:hover {
   color: #0652DD;
-  
 }
 
-/* .side-bar .navbar a:hover i {
+.side-bar .navbar a:hover i {
   padding-right: 2rem;
-} */
+}
 
 .side-bar .navbar a i {
   padding-right: .5rem;
@@ -1269,22 +1206,21 @@ section {
   }
   .header .search-form {
     position: absolute;
-    top: 100%; /* Change this to 100% */
+    top: 99%;
     left: 0;
     right: 0;
     width: 100%;
     border-radius: 0;
     -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
-    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
-    /* height: 6rem; */
+            box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+    height: 6rem;
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
-    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+            clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
   }
   .header .search-form.active {
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
   }
-  
   .swiper-button-next,
   .swiper-button-prev {
     display: none;

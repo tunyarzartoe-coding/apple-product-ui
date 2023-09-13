@@ -15,13 +15,16 @@ const Navigation = () => {
     <BrowserRouter>
     <Header/>
     <Routes>
-        <Route path='/' element={<Home/>}/>
+    <Route path='/' element={<Home/>}/>
+    <Route path='/cart' element={<Cart/>}/>
+    <Route path='/menu' element={<Menu/>}/>
+        {/* 
         <Route path='/about' element={<About/>}/>
-        <Route path='/cart' element={<Cart/>}/>
+        
         <Route path='/login' element={<Login/>}/>
         <Route path='/register' element={<Register/>}/>
         <Route path='/payment-success' element={<PaymentSuccess/>}/>
-        <Route path='/menu' element={<Menu/>}/>
+         */}
     </Routes>
     {/* <Footer/> */}
     </BrowserRouter>
